@@ -18,7 +18,7 @@ function App() {
 
       <nav className="navbar">
         <ul className="nav">
-          <h2 className="BrandName">Stegano</h2>
+          <a href="/" className="BrandName">Stegano</a>
           <li>
             <Link to="/stegano/">Encode</Link>
           </li>

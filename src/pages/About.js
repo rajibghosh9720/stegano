@@ -4,7 +4,7 @@ export default class About extends React.Component {
   render() {
     return (
       <div className="AboutSection">
-        <h1>About</h1>
+        <h2>About</h2>
         <h3>📝 Introduction</h3>
         <p>
           Steganography is the practice of concealing a secret message within an

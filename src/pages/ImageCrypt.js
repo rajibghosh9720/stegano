@@ -97,7 +97,7 @@ export default class ImageCrypt extends React.Component {
                 { this.state.isUploaded && <Button size="big" text="Reupload" onClick={() => { this.upload.click() }}></Button>}
                 { !this.state.isUploaded && <Button size="big" text="Upload" onClick={() => { this.upload.click() }}></Button>}
                 <canvas className="ImageCanvas" ref={this.canvasRef} style={canvasStyle} />
-                <input id="fileUploadInput" type="file" accept="image/png" ref={(ref) => this.upload = ref} style={{ display: 'none' }}
+                <input id="fileUploadInput" type="file" accept="image/png, image/jpeg" ref={(ref) => this.upload = ref} style={{ display: 'none' }}
                     onChange={this.onChangeFile.bind(this)} />
                 {
                     this.state.isUploaded && (

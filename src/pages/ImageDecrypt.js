@@ -53,9 +53,9 @@ export default class ImageDecrypt extends React.Component {
                 <h2>Decode Image</h2>
                 <p>Upload your image to decode it.</p>
                 <canvas className="ImageCanvas" ref={this.canvasRef} style={canvasStyle} />
-                <input id="fileUploadInput" type="file" accept="image/png" ref={(ref) => this.upload = ref} style={{ display: 'none' }}
+                <input id="fileUploadInput" type="file" accept="image/png, image/jpeg" ref={(ref) => this.upload = ref} style={{ display: 'none' }}
                     onChange={this.onChangeFile.bind(this)} />
-                { this.state.isUploaded && <div style={{width: "100%"}}>Decoded message: <div className="HiddenTextContainer" dangerouslySetInnerHTML={this.replaceURLWithHTMLLinks(this.state.hiddenText)}></div> </div>}
+                { this.state.isUploaded && <div className="HiddenText">Decoded message: <div className="HiddenTextContainer" dangerouslySetInnerHTML={this.replaceURLWithHTMLLinks(this.state.hiddenText)}></div> </div>}
                 <Button text="Upload" size="big" onClick={() => { this.upload.click() }}></Button>
                 <subtitle>This can take a while if your image is too large.</subtitle>
                 { this.state.haveError && <div className="ErrorPanel">Oh! Something happened. It might be because your image is corrupted or we messed up something. Either way, you can't use this image.</div> }
